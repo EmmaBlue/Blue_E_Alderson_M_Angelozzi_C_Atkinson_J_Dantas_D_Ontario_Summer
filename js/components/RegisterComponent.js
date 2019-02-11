@@ -1,12 +1,12 @@
 import HeaderComponent from "./layout/HeaderComponent.js";
-import ContentComponent from "./layout/ContentComponent.js";
+import SignupComponent from "./layout/SignupComponent.js";
 import FooterComponent from "./layout/FooterComponent.js";
 
 export default {
   template: `
     <section>
       <HeaderComponent />
-      <ContentComponent />
+      <SignupComponent/> 
       <FooterComponent />
     </section>
   `,
@@ -19,7 +19,7 @@ export default {
 
   components: {
     HeaderComponent: HeaderComponent,
-    ContentComponent: ContentComponent,
+    SignupComponent: SignupComponent,
     FooterComponent: FooterComponent
   }
 };
