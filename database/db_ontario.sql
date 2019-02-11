@@ -1,0 +1,328 @@
+# ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: localhost (MySQL 5.6.38)
+# Database: db_ontario
+# Generation Time: 2019-02-11 03:15:43 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table admin
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table country
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `country`;
+
+CREATE TABLE `country` (
+  `country_code_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `country` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`country_code_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `country` WRITE;
+/*!40000 ALTER TABLE `country` DISABLE KEYS */;
+
+INSERT INTO `country` (`country_code_id`, `country`)
+VALUES
+	(2,'Afghanistan'),
+	(3,'Albania'),
+	(4,'Algeria'),
+	(5,'American Samoa'),
+	(6,'Andorra'),
+	(7,'Angola'),
+	(8,'Anguilla'),
+	(9,'Antarctica'),
+	(10,'Antigua and Barbuda'),
+	(11,'Argentina'),
+	(12,'Armenia'),
+	(13,'Aruba'),
+	(14,'Australia'),
+	(15,'Austria'),
+	(16,'Azerbaijan'),
+	(17,'Bahamas'),
+	(18,'Bahrain'),
+	(19,'Bangladesh'),
+	(20,'Barbados'),
+	(21,'Belarus'),
+	(22,'Belgium'),
+	(23,'Belize'),
+	(24,'Benin'),
+	(25,'Bermuda'),
+	(26,'Bhutan'),
+	(27,'Bolivia'),
+	(28,'Bosnia and Herzegovina'),
+	(29,'Botswana'),
+	(30,'Bouvet Island'),
+	(31,'Brazil'),
+	(32,'British Indian Ocean Territory'),
+	(33,'Brunei Darussalam'),
+	(34,'Bulgaria'),
+	(35,'Burkina Faso'),
+	(36,'Burundi'),
+	(37,'Cambodia'),
+	(38,'Cameroon'),
+	(39,'Canada'),
+	(40,'Cape Verde'),
+	(41,'Cayman Islands'),
+	(42,'Central African Republic'),
+	(43,'Chad'),
+	(44,'Chile'),
+	(45,'China'),
+	(46,'Christmas Island'),
+	(47,'Cocos (Keeling) Islands'),
+	(48,'Colombia'),
+	(49,'Comoros'),
+	(50,'Congo'),
+	(51,'Cook Islands'),
+	(52,'Costa Rica'),
+	(53,'Croatia (Hrvatska)'),
+	(54,'Cuba'),
+	(55,'Cyprus'),
+	(56,'Czech Republic'),
+	(57,'Denmark'),
+	(58,'Djibouti'),
+	(59,'Dominica'),
+	(60,'Dominican Republic'),
+	(61,'East Timor'),
+	(62,'Ecuador'),
+	(63,'Egypt'),
+	(64,'El Salvador'),
+	(65,'Equatorial Guinea'),
+	(66,'Eritrea'),
+	(67,'Estonia'),
+	(68,'Ethiopia'),
+	(69,'Falkland Islands (Malvinas)'),
+	(70,'Faroe Islands'),
+	(71,'Fiji'),
+	(72,'Finland'),
+	(73,'France'),
+	(74,'France, Metropolitan'),
+	(75,'French Guiana'),
+	(76,'French Polynesia'),
+	(77,'French Southern Territories'),
+	(78,'Gabon'),
+	(79,'Gambia'),
+	(80,'Georgia'),
+	(81,'Germany'),
+	(82,'Ghana'),
+	(83,'Gibraltar'),
+	(84,'Guernsey'),
+	(85,'Greece'),
+	(86,'Greenland'),
+	(87,'Grenada'),
+	(88,'Guadeloupe'),
+	(89,'Guam'),
+	(90,'Guatemala'),
+	(91,'Guinea'),
+	(92,'Guinea-Bissau'),
+	(93,'Guyana'),
+	(94,'Haiti'),
+	(95,'Heard and Mc Donald Islands'),
+	(96,'Honduras'),
+	(97,'Hong Kong'),
+	(98,'Hungary'),
+	(99,'Iceland'),
+	(100,'India'),
+	(101,'Isle of Man'),
+	(102,'Indonesia'),
+	(103,'Iran (Islamic Republic of)'),
+	(104,'Iraq'),
+	(105,'Ireland'),
+	(106,'Israel'),
+	(107,'Italy'),
+	(108,'Ivory Coast'),
+	(109,'Jersey'),
+	(110,'Jamaica'),
+	(111,'Japan'),
+	(112,'Jordan'),
+	(113,'Kazakhstan'),
+	(114,'Kenya'),
+	(115,'Kiribati'),
+	(116,'Korea, Democratic People\'s Republic of'),
+	(117,'Korea, Republic of'),
+	(118,'Kosovo'),
+	(119,'Kuwait'),
+	(120,'Kyrgyzstan'),
+	(121,'Lao People\'s Democratic Republic'),
+	(122,'Latvia'),
+	(123,'Lebanon'),
+	(124,'Lesotho'),
+	(125,'Liberia'),
+	(126,'Libyan Arab Jamahiriya'),
+	(127,'Liechtenstein'),
+	(128,'Lithuania'),
+	(129,'Luxembourg'),
+	(130,'Macau'),
+	(131,'Macedonia'),
+	(132,'Madagascar'),
+	(133,'Malawi'),
+	(134,'Malaysia'),
+	(135,'Maldives'),
+	(136,'Mali'),
+	(137,'Malta'),
+	(138,'Marshall Islands'),
+	(139,'Martinique'),
+	(140,'Mauritania'),
+	(141,'Mauritius'),
+	(142,'Mayotte'),
+	(143,'Mexico'),
+	(144,'Micronesia, Federated States of'),
+	(145,'Moldova, Republic of'),
+	(146,'Monaco'),
+	(147,'Mongolia'),
+	(148,'Montenegro'),
+	(149,'Montserrat'),
+	(150,'Morocco'),
+	(151,'Mozambique'),
+	(152,'Myanmar'),
+	(153,'Namibia'),
+	(154,'Nauru'),
+	(155,'Nepal'),
+	(156,'Netherlands'),
+	(157,'Netherlands Antilles'),
+	(158,'New Caledonia'),
+	(159,'New Zealand'),
+	(160,'Nicaragua'),
+	(161,'Niger'),
+	(162,'Nigeria'),
+	(163,'Niue'),
+	(164,'Norfolk Island'),
+	(165,'Northern Mariana Islands'),
+	(166,'Norway'),
+	(167,'Oman'),
+	(168,'Pakistan'),
+	(169,'Palau'),
+	(170,'Palestine'),
+	(171,'Panama'),
+	(172,'Papua New Guinea'),
+	(173,'Paraguay'),
+	(174,'Peru'),
+	(175,'Philippines'),
+	(176,'Pitcairn'),
+	(177,'Poland'),
+	(178,'Portugal'),
+	(179,'Puerto Rico'),
+	(180,'Qatar'),
+	(181,'Reunion'),
+	(182,'Romania'),
+	(183,'Russian Federation'),
+	(184,'Rwanda'),
+	(185,'Saint Kitts and Nevis'),
+	(186,'Saint Lucia'),
+	(187,'Saint Vincent and the Grenadines'),
+	(188,'Samoa'),
+	(189,'San Marino'),
+	(190,'Sao Tome and Principe'),
+	(191,'Saudi Arabia'),
+	(192,'Senegal'),
+	(193,'Serbia'),
+	(194,'Seychelles'),
+	(195,'Sierra Leone'),
+	(196,'Singapore'),
+	(197,'Slovakia'),
+	(198,'Slovenia'),
+	(199,'Solomon Islands'),
+	(200,'Somalia'),
+	(201,'South Africa'),
+	(202,'South Georgia South Sandwich Islands'),
+	(203,'South Sudan'),
+	(204,'Spain'),
+	(205,'Sri Lanka'),
+	(206,'St. Helena'),
+	(207,'St. Pierre and Miquelon'),
+	(208,'Sudan'),
+	(209,'Suriname'),
+	(210,'Svalbard and Jan Mayen Islands'),
+	(211,'Swaziland'),
+	(212,'Sweden'),
+	(213,'Switzerland'),
+	(214,'Syrian Arab Republic'),
+	(215,'Taiwan'),
+	(216,'Tajikistan'),
+	(217,'Tanzania, United Republic of'),
+	(218,'Thailand'),
+	(219,'Togo'),
+	(220,'Tokelau'),
+	(221,'Tonga'),
+	(222,'Trinidad and Tobago'),
+	(223,'Tunisia'),
+	(224,'Turkey'),
+	(225,'Turkmenistan'),
+	(226,'Turks and Caicos Islands'),
+	(227,'Tuvalu'),
+	(228,'Uganda'),
+	(229,'Ukraine'),
+	(230,'United Arab Emirates'),
+	(231,'United Kingdom'),
+	(232,'United States'),
+	(233,'United States minor outlying islands'),
+	(234,'Uruguay'),
+	(235,'Uzbekistan'),
+	(236,'Vanuatu'),
+	(237,'Vatican City State'),
+	(238,'Venezuela'),
+	(239,'Vietnam'),
+	(240,'Virgin Islands (British)'),
+	(241,'Virgin Islands (U.S.)'),
+	(242,'Wallis and Futuna Islands'),
+	(243,'Western Sahara'),
+	(244,'Yemen'),
+	(245,'Zaire'),
+	(246,'Zambia'),
+	(247,'Zimbabwe');
+
+/*!40000 ALTER TABLE `country` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table subscribers
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `subscribers`;
+
+CREATE TABLE `subscribers` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `subscribed_at` datetime NOT NULL,
+  `country_code` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,21 @@
+{
+  "name": "blue_e_alderson_m_angelozzi_c_atkinson_j_dantas_d_ontario_summer",
+  "version": "1.0.0",
+  "description": "Hackhaton - Midterm 2019",
+  "main": "js/main.js",
+  "scripts": {
+    "dev": "gulp watch & gulp serve"
+  },
+  "author": "blue_e_alderson_m_angelozzi_c_atkinson_j_dantas",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "node-sass": "^4.9.3",
+    "vuetify": "^1.4.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp-imagemin": "^4.1.0"
+  }
+}

@@ -1,0 +1,17 @@
+#darkMode {
+  position: absolute;
+  top: 3.9rem;
+  right: 3rem;
+  width: 2.6rem;
+  cursor: pointer;
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    top: 5.8rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    right: 9rem;
+  }
+}

@@ -1,0 +1,28 @@
+html {
+  font-size: 62.5%;
+  /* 62.5% of 16px is 10px which is 1rem */
+  min-height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+// FOR TESTING PURPOSES
+#welcome {
+  color: $light-grey;
+  margin-top: 20rem;
+  text-align: center;
+}
+
+// ---- Dark Mode
+
+[data-palette="0"] {
+  background: #eee;
+}
+
+[data-palette="1"] {
+  background: $light-grey;
+  color: $almost-black;
+}
