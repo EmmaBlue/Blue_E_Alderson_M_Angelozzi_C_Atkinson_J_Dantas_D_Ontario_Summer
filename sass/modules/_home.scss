@@ -3,9 +3,10 @@
 }
 
 #landingSect{
+  background: url('../images/hero-bckgd-md.jpg');
   background-position: center;
-  background-size: 120%;
-  position: fixed;
+  background-size: cover;
+  // position: fixed;
   overflow-y: hidden;
   height: 100vh;
   width: 100%;
@@ -13,32 +14,47 @@
   transition: all 1.5s ease;
   overflow-x: hidden;
 
+  @media screen and (min-width: 850px){
+    background: none;
+    position: fixed;
+  }
+
   #sectionbckgd{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    //max-width: 100%;
-    min-height: 100vh;
-    margin-top: -70px;
-    z-index: 1;
-    overflow: hidden;
+    display: none;
+
+    @media screen and (min-width: 850px){
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      min-height: 100vh;
+      margin-top: -70px;
+      z-index: 1;
+      overflow: hidden;
+    }
 
     img{
-      //width: 100%;
-      min-height: 100%;
-      transform: scale(1.0);
-      transform-origin: center;
-      transition: all 1.5s ease;
-      filter: none;
+      @media screen and (min-width: 850px){
+        min-height: 100%;
+        transform: scale(1.0);
+        transform-origin: center;
+        transition: all 1.5s ease;
+        filter: none;
+      }
     }
   }
 
   #img{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: 2;
-    transition: all 0.8s ease;
+    display: none;
+
+    @media screen and (min-width: 850px){
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 2;
+      transition: all 0.8s ease;
+    }
 
     img{
       width: auto;
@@ -52,9 +68,12 @@
 }
 
 #contentCon{
-  position: relative;
-  z-index: 0;
-  background-color: #fff;
+
+  @media screen and (min-width: 850px){
+    position: relative;
+    z-index: 0;
+    background-color: #fff;
+  }
 }
 
 #mainDesc {
@@ -64,7 +83,9 @@
 
     h2 {
 
-        font-size: 7.5em;
+        @media screen and (min-width: 850px){
+          font-size: 7.5em;
+        }
     }
 
     p {
@@ -83,21 +104,28 @@
 }
 
 #picSect {
+
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 600px){
     max-width: 1200px;
     padding: 10px 0;
     background-color: #fff;
     margin: 0 auto;
-    display: grid;
-    grid-gap: 0px;
+    //display: grid;
+    //grid-gap: 0px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    //grid-column-gap: 10px;
+    //grid-row-gap: 10px;
     //max-width: 1540px;
     justify-content: center;
-
+  }
     .box {
 
-        width: 100%;
+        max-width: 100%;
         min-height: 300px;
         display: relative;
         //background-color: grey;
@@ -106,10 +134,13 @@
         background-position: center;
         //margin: 0 auto;
         //&:first-child{
+        background-image: url('../images/concert-web@2x.png');
+        @media screen and (min-width: 600px){
               grid-column: 1 / 2;
               grid-row: 1/2;
-              background-image: url('../images/concert-web@2x.png');
+
               //overflow: hidden;
+            }
           //}
     }
 
@@ -140,9 +171,11 @@
 
 
     .box:nth-child(2) {
-        grid-column: 2 / -1;
-        grid-row: 1/2;
         background-image: url('../images/water-web@2x.png');
+        @media screen and (min-width: 600px){
+          grid-column: 2 / -1;
+          grid-row: 1/2;
+        }
 
         &::after{
           content: "RELAX";
@@ -151,9 +184,11 @@
     }
 
     .box:nth-child(3) {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
         background-image: url('../images/canoe-web@2x.png');
+        @media screen and (min-width: 600px){
+              grid-column: 1 / 3;
+              grid-row: 2 / 3;
+        }
 
         &::after{
           content: "ENJOY";
@@ -162,9 +197,11 @@
     }
 
     .box:nth-child(4) {
-        grid-row: 2 / 3;
-        grid-column: 3 / -1;
         background-image: url('../images/toronto-site@2x.png');
+        @media screen and (min-width: 600px){
+          grid-row: 2 / 3;
+          grid-column: 3 / -1;
+        }
 
         &::after{
           content: "EXPERIENCE";
