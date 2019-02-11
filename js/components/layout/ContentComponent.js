@@ -29,7 +29,7 @@ export default {
 
               <section class="box">
                 <h2 class="hidden">Picture</h2>
-                  
+
               </section>
 
               <section class="box">
@@ -70,19 +70,16 @@ mounted: function(){
     //get next section
     var maindesc = document.querySelector("#contentCon");
     var offsetmargin = heroheight + 120;
-    //console.log(offsetmargin);
+
     maindesc.style.transform = "translateY("+offsetmargin+"px)";
-    //maindesc.style.marginTop = offsetmargin+"px";
 
     if (window.scrollY < 25){
       image.style.transform = "scale(1.0)";
-      //bckgd.style.width = "120%";
       bckgd.style.transform = "scale(1.0)";
       bckgd.style.filter = "none";
 
     }if (window.scrollY > 26){
       image.style.transform = "scale(0.9)";
-      //bckgd.style.width = "110%";
       bckgd.style.transform = "scale(1.2)";
       bckgd.style.filter = "blur(2px)";
 
