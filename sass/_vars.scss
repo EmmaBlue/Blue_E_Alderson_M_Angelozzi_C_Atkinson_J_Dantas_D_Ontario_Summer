@@ -11,3 +11,19 @@ $red: #f81621;
 $muddy-purple: #905985;
 $almost-black: #191919;
 $reg-font: 'Raleway', sans-serif;
+
+//fonts
+@fontface{
+  font-family: 'Raleway-Regular';
+  src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@fontface{
+  font-family: 'Raleway-Black';
+  src: url('../fonts/Raleway-Black.ttf');
+}
+
+@fontface{
+  font-family: 'PatrickHand';
+  src: url('../fonts/PatrickHand-Regular.ttf');
+}

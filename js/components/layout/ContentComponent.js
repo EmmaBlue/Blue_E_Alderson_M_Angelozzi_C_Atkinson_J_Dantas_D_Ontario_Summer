@@ -9,6 +9,10 @@ export default {
             <div id="sectionbckgd">
               <img src="images/hero-bckgd-lg.jpg">
             </div>
+            <div id="heroTitle">
+              <p class="title-font">ONTARIO SUMMER</p>
+              <p class="tagline">Find yourself at home.</p>
+            </div>
             <div id="img">
               <img src="images/hero-overlay.png">
             </div>
@@ -63,6 +67,7 @@ mounted: function(){
     var image = document.querySelector("#img img");
     var bckgd = document.querySelector("#sectionbckgd img");
     var bckgdcon = document.querySelector("#sectionbckgd");
+    var title = document.querySelector("#heroTitle");
 
     //get height of hero
     var heroheight = bckgdcon.offsetHeight;
@@ -77,11 +82,13 @@ mounted: function(){
       image.style.transform = "scale(1.0)";
       bckgd.style.transform = "scale(1.0)";
       bckgd.style.filter = "none";
+      title.style.opacity = 0;
 
     }if (window.scrollY > 26){
       image.style.transform = "scale(0.9)";
       bckgd.style.transform = "scale(1.2)";
       bckgd.style.filter = "blur(2px)";
+      title.style.opacity = 1;
 
     }if(window.scrollY > 100){
       bckgdcon.style.zIndex = "-1";
