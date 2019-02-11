@@ -2,12 +2,6 @@
   position: relative;
 }
 
-
-#landingSect {
-  background: url('../images/hero-bckgd-md.jpg');
-  background-position: center;
-  background-size: cover; // position: fixed;
-
 @keyframes backgroundScroll{
   from{
     background-position: 0%;
@@ -58,9 +52,6 @@
     }
   }
 
-  #img {
-
-
   #heroTitle{
     height: 100vh;
     display: flex;
@@ -102,7 +93,6 @@
   }
 
   #img{
-
     display: none;
     @media screen and (min-width: 850px) {
       display: block;
@@ -122,6 +112,7 @@
     }
   }
 }
+
 
 #contentCon {
   @media screen and (min-width: 850px) {
@@ -166,6 +157,7 @@
     font-size: 1.5625em;
     line-height: 40px;
   }
+}
 }
 
 #videoSect {
