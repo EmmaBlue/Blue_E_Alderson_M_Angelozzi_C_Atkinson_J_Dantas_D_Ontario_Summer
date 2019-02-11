@@ -118,52 +118,69 @@
   @media screen and (min-width: 850px) {
     position: relative;
     z-index: 0;
-    background-color: #fff;
+    //background-color: #fff;
   }
 }
 
 #mainDesc {
-
   text-align: center;
-  padding: 50px 10% 50px 10%;
+  padding: 50px 10px;
   background-color: #fff;
+  margin: 0 auto;
+  //max-width: 850px;
+
+  #descCon{
+    @media screen and (min-width: 600px){
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .title{
+      font-size: 20px;
+      font-weight: 900;
+      color: #01bec0;
+      margin-bottom: 50px;
+    }
+
+    .tagline{
+      font-family: 'Patrick Hand', sans-serif;
+      font-size: 25px;
+      color: #01bec0;
+    }
+
+    p{
+      @media screen and (min-width: 600px){
+        line-height: 30px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px){
+    padding: 100px 0;
+    text-align: center;
+    //background: rgba(255,255,255,0.5);
+  }
+
   h2 {
-    @media screen and (min-width: 850px) {
-      font-size: 7.5em;
-
-
     background-color: #fff;
     padding: 50px 10px;
-    @media screen and (min-width: 600px){
-    padding: 50px 10% 50px 10%;
-    text-align: center;
-    }
 
-
-    h2 {
-
-        @media screen and (min-width: 850px){
-          font-size: 7.5em;
-        }
-    }
-
-    p {
-        font-size: 1.5625em;
-        line-height: 40px;
-
+    @media screen and (min-width: 850px) {
+      font-size: 7.5em;
     }
   }
-  p {
-    font-size: 1.5625em;
-    line-height: 40px;
-  }
+
 }
-}
+
+
 
 #videoSect {
-  height: 100vh;
+  //height: 100vh;
   width: 100vw;
-  margin-bottom: 20px;
+  //padding-bottom: 20px;
+  margin: 0;
+  background-color: #fff;
 }
 
 .fullscreen-vid-wrap {
@@ -171,6 +188,18 @@
   video {
     width: 100%;
     height: 100%;
+  }
+}
+
+#divider{
+  width: 100%;
+  padding: 50px 0;
+  background-color: #fff;
+  p{
+    font-size: 20px;
+    color: #01bec0;
+    font-weight: 900;
+    text-align: center;
   }
 }
 
