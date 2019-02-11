@@ -8,18 +8,18 @@ export default {
         <div class='content'>
           <div class='welcome'>Hello There!</div>
           <div class='subtitle'>Get Info about Summer in Ontario.</div>
-          <form action="admin/sign-up.php" method="post">
+          <form>
           <div class='input-fields'>
-            <input type='text' name="first-name" value="" placeholder='First Name' class='input-line full-width'></input>
-            <input type='text' name="last-name" value="" placeholder='Last Name' class='input-line full-width'></input>
-            <input type='email' name="email" value="" placeholder='Email' class='input-line full-width'></input>
-            <select class='input-line full-width' name="countries">
+            <input v-model="input['first-name']" type='text' name="first-name" value="" placeholder='First Name' class='input-line full-width'></input>
+            <input v-model="input['last-name']" type='text' name="last-name" value="" placeholder='Last Name' class='input-line full-width'></input>
+            <input v-model="input.email" type='email' name="email" value="" placeholder='Email' class='input-line full-width'></input>
+            <select v-model="input.countries" class='input-line full-width' name="countries">
               <option name="">Select Country...</option>
               <option v-for="country in countries" :value="country.country_id">{{ country.country_name }}</option>
             </select>
             </div>
             <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
-            <div><button type='submit' name='submit' class='ghost-round full-width'>Create Account</button></div>
+            <div><button @click.prevent="create_subscriber" type='submit' name='submit' class='ghost-round full-width'>Create Account</button></div>
             </form>
         </div>
       </div>
@@ -28,7 +28,13 @@ export default {
   `,
   data() {
     return {
-      countries : [],
+      countries: [],
+      input: {
+        "first-name": "",
+        "last-name": "",
+        email: "",
+        courntries: ""
+      }
     };
   },
 
@@ -51,7 +57,40 @@ export default {
           console.log(error);
         });
     },
+    create_subscriber() {
+      if (this.input["first-name"] !== "" && this.input["last-name"] !== "" && this.input.email !== "" && this.input.countries !== "") {
+        // do afetch here and check creds on the back end
+        // CREATE some form data to do a POST request
+        let formData = new FormData();
 
+        formData.append("first-name", this.input["first-name"]);
+        formData.append("last-name", this.input["last-name"]);
+        formData.append("email", this.input.email);
+        formData.append("countries", this.input.countries);
+
+        let url = `./admin/sign-up.php`;
+        fetch(url, {
+          method: "POST",
+          body: formData
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data == "Subscription Failed") {
+              console.log("Authentication failed, try again");
+            } else {
+              // this.$emit("authenticated", true);
+              // this.$router.replace({ name: "users" });
+              console.log("Subscription created");
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      } else {
+        console.log("Fields shouldn't be blank");
+      }
+    }
   },
 
   components: {}

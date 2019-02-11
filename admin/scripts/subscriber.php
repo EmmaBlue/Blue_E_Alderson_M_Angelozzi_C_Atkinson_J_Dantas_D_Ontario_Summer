@@ -1,9 +1,13 @@
 <?php
-
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 
 
 function createSubscriber($firstname, $lastname, $email, $country_id)
 {
+
+    // Check if user exists
+    // check_user_exists_query ="SELECT ";  
     // connection to Database
     require_once 'config.php';
     $pdo = connect_to_db();
@@ -43,12 +47,13 @@ function createSubscriber($firstname, $lastname, $email, $country_id)
     )
   );
 
-    if ($insert_user->rowCount() > 0) {
-        // redirect_to('index.php');
-        // Header('Location: index.php?success= '. $random_not_hashed_password);
-        echo "niceeeeeee";
+
+    if ($country_id_set->rowCount() > 0) {
+      
+         $message = "OK";
+        return $message;
     } else {
-        $message = "Insert data failed!";
+        $message = "Subscription Failed";
         return $message;
     }
 }
