@@ -7,19 +7,18 @@ export default {
         <div class='overlay'></div>
         <div class='content'>
           <div class='welcome'>Hello There!</div>
-          <div class='subtitle'>Get Info about Summer in Ontario.</div>
+          <div class='subtitle'>Sign up to our newsletter to get more information about what's happening in Ontario.</div>
           <form action="admin/sign-up.php" method="post">
           <div class='input-fields'>
             <input type='text' name="first-name" value="" placeholder='First Name' class='input-line full-width'></input>
             <input type='text' name="last-name" value="" placeholder='Last Name' class='input-line full-width'></input>
             <input type='email' name="email" value="" placeholder='Email' class='input-line full-width'></input>
-            <select class='input-line full-width' name="countries">
-              <option name="">Select Country...</option>
+            <select class='input-line full-width dropdown' name="countries">
+              <option class="grey" name="">Select Country...</option>
               <option v-for="country in countries" :value="country.country_id">{{ country.country_name }}</option>
             </select>
-            </div>
-            <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
-            <div><button type='submit' name='submit' class='ghost-round full-width'>Create Account</button></div>
+</div>
+            <div id="button-container"><button type='submit' name='submit' class='ghost-round'>Create Account</button></div>
             </form>
         </div>
       </div>
