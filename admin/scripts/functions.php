@@ -39,84 +39,50 @@ function get_countries()
     return $results;
 }
 
+// confirmation email old user
+function old_subscriber_email($lastname, $firstname, $email)
+{
+    $toEmail = $email;
+    $subject = 'Ontario Summer Newsletter';
+    $body = '<h2>Welcome Back to Ontario Summer:'. $firstname .' '.$lastname . '</h2>
+	<p> Let us know if you have any feedback and be sure to check us out at social media. As you know, with this newsletter you will be up to date with what is going on in Ontario this summer. I hope you enjoy it this time and have fun!</p>
+	<h4>Visit us at: </h4><a href="www.ontariosummer.ca">Login Here</a>
+				';
+    // Email Headers
+    $headers = "MIME-Version: 1.0" . "\n";
+    $headers .= "Content-type:text/html;charset=iso-8859-1" . "\n";
+
+    mail($toEmail, $subject, $body, $headers);
+
+    if (!mail($toEmail, $subject, $body, $headers)) {
+        // Failed
+        $msg = 'Your email was not sent';
+        echo $msg;
+    }
+}
+
 
 // confirmation email to new user
-// function user_created_email($fname, $username, $password, $email)
-// {
-//     $toEmail = $email;
-//     $subject = 'Welcome to ' . $fname . ' - User Registration is completed.';
-//     $body = '<h2>New User information: </h2>
-// 					<h4>Username</h4><p>' . $username . '</p>
-// 					<h4>Password</h4><p>' . $password . '</p>
-// 					<h4>Login url: </h4><a href="http://localhost/Angelozzi_C_3014_r2/admin/admin_login.php">Login Here</a>
-// 				';
-//     // Email Headers
-//     $headers = "MIME-Version: 1.0" . "\n";
-//     $headers .= "Content-type:text/html;charset=iso-8859-1" . "\n";
+function new_subscriber_email($lastname, $firstname, $email)
+{
+    $toEmail = $email;
+    $subject = 'Ontario Summer Newsletter';
+    $body = '<h2>Welcome to Ontario Summer:'. $firstname .' '.$lastname . '</h2>
+	<p> Thank you for signing up and keep in touch with what is going on in Ontario this summer. From now on you will get regular updates on Great things to do in Ontario! I hope you enjoy it and have fun!</p>
+	<h4>Visit us at: </h4><a href="www.ontariosummer.ca">Login Here</a>
+				';
+    // Email Headers
+    $headers = "MIME-Version: 1.0" . "\n";
+    $headers .= "Content-type:text/html;charset=iso-8859-1" . "\n";
 
-//     mail($toEmail, $subject, $body, $headers);
+    mail($toEmail, $subject, $body, $headers);
 
-//     if (!mail($toEmail, $subject, $body, $headers)) {
-//         // Failed
-//         $msg = 'Your email was not sent';
-//         echo $msg;
-//     }
-// }
+    if (!mail($toEmail, $subject, $body, $headers)) {
+        // Failed
+        $msg = 'Your email was not sent';
+        echo $msg;
+    }
+}
 
-// // create a CRYPTOGRAPHICALLY SECURE PSEUDORANDOM NUMBER GENERATOR
-// function random_password($length = 8)
-// {
-//     $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' .
-//       '0123456789`-=~!@#$%^&*()_+,./<>?;:[]{}\|';
 
-//     $str = '';
-//     $max = strlen($chars) - 1;
 
-//     for ($i = 0; $i < $length; $i++) {
-//         $str .= $chars[random_int(0, $max)];
-//     }
-
-//     return $str;
-// }
-
-// // update initial password
-// function update_init_password($old_password, $new_password, $username)
-// {
-//     $pdo = connect_to_db();
-//     $get_password_query = "SELECT `user_pass` FROM tbl_user WHERE user_name = :username";
-//     $get_password = $pdo->prepare($get_password_query);
-//     $get_password->execute(
-//     array(
-//       ':username' => $username
-//     )
-//   );
-
-//     $init_password = $get_password->fetchColumn();
-
-//     if (password_verify($old_password, $init_password)) {
-//         $update_psw_query = 'UPDATE `tbl_user` SET `user_pass` = "' . $new_password . '", `user_last_login` = NOW() WHERE user_name = :username';
-//         $set_new_password = $pdo->prepare($update_psw_query);
-//         $set_new_password->execute(
-//       array(
-//         ':username' => $username
-//       )
-//     );
-
-//         Header('Location: ../admin_login.php?psw_updated');
-//     } else {
-//         echo "Password has not been updated. Try again.";
-//     }
-// }
-
-// function reset_wrong_login($username)
-// {
-//     $pdo = connect_to_db();
-//     // update user attempt login to zero
-//     $update_user_attempt_login = "UPDATE `tbl_user` SET `user_failed_login_attempts` = 0 WHERE user_name = :username";
-//     $user_failed_login = $pdo->prepare($update_user_attempt_login);
-//     $user_failed_login->execute(
-//     array(
-//       ':username' => $username
-//     )
-//   );
-// }

@@ -20,7 +20,7 @@ export default {
       }
 
       document.body.setAttribute("data-palette", palette);
-    }
+    },
   },
 
   components: {
