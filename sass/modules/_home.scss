@@ -2,12 +2,6 @@
   position: relative;
 }
 
-
-#landingSect {
-  background: url('../images/hero-bckgd-md.jpg');
-  background-position: center;
-  background-size: cover; // position: fixed;
-
 @keyframes backgroundScroll{
   from{
     background-position: 0%;
@@ -58,9 +52,6 @@
     }
   }
 
-  #img {
-
-
   #heroTitle{
     height: 100vh;
     display: flex;
@@ -102,7 +93,6 @@
   }
 
   #img{
-
     display: none;
     @media screen and (min-width: 850px) {
       display: block;
@@ -167,6 +157,7 @@
     line-height: 40px;
   }
 }
+}
 
 #videoSect {
   height: 100vh;
@@ -219,7 +210,8 @@
     font-size: 40px; //font-weight: 700;
 
     font-size: 40px;
-    font-family: 'Raleway-Black', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
     //font-weight: 700;
 
     //padding-left: 20px;
@@ -265,7 +257,5 @@
     &::after {
       content: "EXPERIENCE";
     }
-}
-
-
+  }
 }

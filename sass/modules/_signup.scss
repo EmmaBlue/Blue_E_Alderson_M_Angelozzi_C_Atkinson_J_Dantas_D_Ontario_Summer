@@ -1,9 +1,17 @@
-
-
-
 input {
   border: none;
 
+}
+
+select {
+
+  margin-top: 10px;
+}
+
+#country-label {
+
+  font-size: 1.25em;
+  margin-bottom: 15px;
 }
 
 #button-container {
@@ -53,9 +61,9 @@ input {
 
 .ghost-round {
   cursor: pointer;
-  background: rgba(1, 1, 1, 0.85);
-  border: 1px solid rgba(1, 1, 1, 0.65);
-  color: white;
+  background:rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(1, 1, 1, 0.65);
+  color: black;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -71,8 +79,8 @@ input {
 }
 
 .ghost-round:hover {
-  background: rgba(255, 255, 255, 0.85);
-  color: black;
+  background: rgba(1, 1, 1, 0.85); 
+  color: white;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
