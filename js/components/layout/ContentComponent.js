@@ -64,12 +64,14 @@ mounted: function(){
 
     if (window.scrollY < 25){
       image.style.transform = "scale(1.0)";
-      bckgd.style.width = "120%";
+      //bckgd.style.width = "120%";
+      bckgd.style.transform = "scale(1.0)";
       bckgd.style.filter = "none";
 
     }if (window.scrollY > 26){
       image.style.transform = "scale(0.9)";
-      bckgd.style.width = "110%";
+      //bckgd.style.width = "110%";
+      bckgd.style.transform = "scale(1.2)";
       bckgd.style.filter = "blur(2px)";
 
     }if(window.scrollY > 100){

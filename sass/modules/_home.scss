@@ -17,13 +17,17 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    max-width: 100%;
+    //max-width: 100%;
+    min-height: 100vh;
     margin-top: -70px;
     z-index: 1;
     overflow: hidden;
 
     img{
-      width: 100%;
+      //width: 100%;
+      min-height: 100%;
+      transform: scale(1.0);
+      transform-origin: center;
       transition: all 1.5s ease;
       filter: none;
     }
