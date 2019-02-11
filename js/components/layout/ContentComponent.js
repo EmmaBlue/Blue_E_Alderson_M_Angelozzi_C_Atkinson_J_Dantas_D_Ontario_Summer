@@ -22,10 +22,20 @@ export default {
         <section id="contentCon">
 
           <section id="mainDesc">
-              <p>You deserve to have it all this summer - awe-inspiring views, deep relaxation, exceptional culture, and quality time with the ones you love most. That’s why Ontario is the perfect spot for your vacation. Explore the sights at Tobermory, watch the newest indie films at the Toronto Lightbox, canoe in Algonquin Park, and relax at a wine-tasting in Niagara on the Lake.  This time, you won’t need to take a vacation from your vacation. Enjoy all there is to experience this summer, and find yourself at home.</p>
+            <div id="descCon">
+              <p class="title">YOU DESERVE TO HAVE IT ALL THIS SUMMER.</p>
+              <p>Awe-inspiring views, deep relaxation, exceptional culture, and quality time with the ones you love most. That’s why Ontario is the perfect spot for your vacation.</p>
+              <p>Explore the sights at Tobermory, watch the newest indie films at the Toronto Lightbox, canoe in Algonquin Park, and relax at a wine-tasting in Niagara on the Lake.</p>
+              <p>This time, you won’t need to take a vacation from your vacation. Enjoy all there is to experience this summer, and </p>
+              <p class="tagline">find yourself at home.</p>
+            </div>
           </section>
 
           <VideoComponent />
+
+          <div id="divider">
+            <p>WHAT DO YOU WANT TO DO TODAY?</p>
+          </div>
 
           <section id="picSect">
             <h2 class="hidden">Picture Gallery</h2>
