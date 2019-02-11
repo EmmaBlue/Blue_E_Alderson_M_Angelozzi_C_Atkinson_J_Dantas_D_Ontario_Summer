@@ -1,6 +1,11 @@
 import HomeComponent from "./components/HomeComponent.js";
+import RegisterComponent from "./components/RegisterComponent.js";
 
-const routes = [{ path: "/", name: "home", component: HomeComponent }];
+const routes = [
+  { path: "/", name: "home", component: HomeComponent },
+  { path: "/home", name: "Home", component: HomeComponent },
+  { path: "/register", name: "Register", component: RegisterComponent}
+];
 
 const router = new VueRouter({
   // mode: 'history',
