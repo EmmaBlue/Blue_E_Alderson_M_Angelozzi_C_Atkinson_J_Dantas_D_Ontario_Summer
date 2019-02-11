@@ -20,6 +20,26 @@ function redirect_to($location)
     }
 }
 
+// get all countries
+function get_countries()
+{
+    $pdo = connect_to_db();
+
+    // create a query
+    $country_query = "SELECT * FROM `tbl_country`";
+    $get_countries = $pdo->prepare($country_query);
+    $get_countries->execute();
+
+    $results = [];
+
+    // add fetched result to array
+    while ($row = $get_countries->fetch(PDO::FETCH_ASSOC)) {
+        $results[] = $row;
+    };
+    return $results;
+}
+
+
 // confirmation email to new user
 // function user_created_email($fname, $username, $password, $email)
 // {
