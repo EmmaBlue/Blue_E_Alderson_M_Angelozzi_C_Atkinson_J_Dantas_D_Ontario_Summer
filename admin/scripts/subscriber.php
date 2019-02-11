@@ -7,7 +7,7 @@ function createSubscriber($firstname, $lastname, $email, $country_id)
 {
 
     // Check if user exists
-    // check_user_exists_query ="SELECT ";  
+    // check_user_exists_query ="SELECT ";
     // connection to Database
     require_once 'config.php';
     $pdo = connect_to_db();
@@ -48,9 +48,8 @@ function createSubscriber($firstname, $lastname, $email, $country_id)
   );
 
 
-    if ($country_id_set->rowCount() > 0) {
-      
-         $message = "OK";
+    if ($country_id_set->rowCount() && $insert_user->rowCount()) {
+        $message = "OK";
         return $message;
     } else {
         $message = "Subscription Failed";
