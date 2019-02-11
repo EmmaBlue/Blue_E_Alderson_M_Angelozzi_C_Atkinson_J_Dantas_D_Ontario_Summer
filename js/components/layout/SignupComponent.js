@@ -21,6 +21,7 @@ export default {
             <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
             <div><button @click.prevent="create_subscriber" type='submit' name='submit' class='ghost-round full-width'>Create Account</button></div>
             </form>
+            <h3 v-if="msg">Subscription Successful!</h3>
         </div>
       </div>
     </div>
@@ -34,7 +35,8 @@ export default {
         "last-name": "",
         email: "",
         courntries: ""
-      }
+      },
+      msg: false
     };
   },
 
@@ -80,7 +82,12 @@ export default {
               console.log("Authentication failed, try again");
             } else {
               // this.$emit("authenticated", true);
-              // this.$router.replace({ name: "users" });
+              // this.$router.replaceries({ name: "users" });
+              this.input["first-name"] = "";
+              this.input["last-name"] = "";
+              this.input.email = "";
+              this.input.countries = "";
+              this.msg = !this.msg;
               console.log("Subscription created");
             }
           })
