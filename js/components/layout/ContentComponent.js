@@ -105,6 +105,9 @@ export default {
 
   },
   //using this.parallax did not work!
+  methods: {},
+  //using this.parallax did not work!
+
 
   components: {
     VideoComponent: VideoComponent
