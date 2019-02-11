@@ -14,8 +14,8 @@ export default {
               <h3 class="hidden">Main Navigation</h3>
               <ul class="navigation__list">
                 <li class="navigation__item" v-for="item in navlist">
-                        <a :href="'#'+item" class="navigation__link">{{ item }}</a>
-                      </li>
+                        <router-link :to="item" class="navigation__link">{{ item }}</router-link>
+                </li>
                 <ul id="social">
                   <li>
                             <a href="http://www.twitter.com" target="_blank" id="tw"
