@@ -1,4 +1,4 @@
-import NavHeaderComponent from "./NavHeaderComponent";
+import NavHeaderComponent from "./NavHeaderComponent.js";
 export default {
   template: `
     <header>
