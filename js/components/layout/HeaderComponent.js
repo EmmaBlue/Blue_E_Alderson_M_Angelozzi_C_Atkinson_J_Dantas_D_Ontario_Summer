@@ -8,7 +8,7 @@ export default {
 
   data() {
     return {
-      navlist: ["Destinations", "Media", "About", "Register"]
+      navlist: ["Home", "Register"]
     };
   },
 
