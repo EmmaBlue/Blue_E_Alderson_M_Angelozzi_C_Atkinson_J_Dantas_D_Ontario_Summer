@@ -1,6 +1,6 @@
-import HeaderComponent from "./layout/HeaderComponent";
-import SignupComponent from "./layout/SignupComponent";
-import FooterComponent from "./layout/FooterComponent";
+import HeaderComponent from "./layout/HeaderComponent.js";
+import SignupComponent from "./layout/SignupComponent.js";
+import FooterComponent from "./layout/FooterComponent.js";
 
 export default {
   template: `
@@ -18,8 +18,8 @@ export default {
   methods: {},
 
   components: {
-    HeaderComponent,
-    SignupComponent,
-    FooterComponent
+    HeaderComponent: HeaderComponent,
+    SignupComponent: SignupComponent,
+    FooterComponent: FooterComponent
   }
 };
