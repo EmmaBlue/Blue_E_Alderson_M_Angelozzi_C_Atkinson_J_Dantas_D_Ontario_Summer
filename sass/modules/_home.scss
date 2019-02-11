@@ -1,14 +1,61 @@
-#landingSect{
-
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
+#mainHome{
+  position: relative;
 }
 
-#mainDesc {
+#landingSect{
+  background-position: center;
+  background-size: 120%;
+  position: fixed;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  transition: all 1.5s ease;
+  overflow-x: hidden;
 
+  #sectionbckgd{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
+    margin-top: -70px;
+    z-index: 1;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      transition: all 1.5s ease;
+      filter: none;
+    }
+  }
+
+  #img{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    transition: all 0.8s ease;
+
+    img{
+      width: auto;
+      max-width: 500px;
+      margin-top: 175px;
+      transform: scale(1.0);
+      transition: all 0.8s ease;
+      transform-origin: (right top);
+    }
+  }
+}
+#contentCon{
+  position: relative;
+  z-index: 0;
+}
+#mainDesc {
+    // position: relative;
+    // z-index: 0;
     text-align: center;
     padding: 50px 10% 50px 10%;
+    background-color: #fff;
 
     h2 {
 
@@ -45,7 +92,7 @@
         background-color: grey;
         //margin: 0 auto;
     }
-    
+
     .box:nth-child(1) {
 
         grid-column: 1 / 2;
