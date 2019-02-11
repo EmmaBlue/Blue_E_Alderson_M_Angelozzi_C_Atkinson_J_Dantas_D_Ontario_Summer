@@ -8,7 +8,7 @@ export default {
         <div class='content'>
           <div class='welcome'>Hello There!</div>
           <div class='subtitle'>Get Info about Summer in Ontario.</div>
-          <form action="admin/signup.php" method="post">
+          <form action="admin/sign-up.php" method="post">
           <div class='input-fields'>
             <input type='text' name="first-name" value="" placeholder='First Name' class='input-line full-width'></input>
             <input type='text' name="last-name" value="" placeholder='Last Name' class='input-line full-width'></input>

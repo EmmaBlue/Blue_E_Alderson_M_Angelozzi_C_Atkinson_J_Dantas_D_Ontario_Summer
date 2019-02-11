@@ -2,7 +2,7 @@
   "name": "blue_e_alderson_m_angelozzi_c_atkinson_j_dantas_d_ontario_summer",
   "version": "1.0.0",
   "description": "Hackhaton - Midterm 2019",
-  "main": "js/main.js",
+  "main": "main.js",
   "scripts": {
     "dev": "gulp watch & gulp serve"
   },
