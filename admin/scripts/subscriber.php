@@ -10,7 +10,8 @@ function createSubscriber($firstname, $lastname, $email, $country_id)
     // connection to Database
     require_once 'config.php';
     $pdo = connect_to_db();
-   // Check if user exists
+    
+   
      $check_sub_exists_query ="SELECT `email` FROM `tbl_subscribers` WHERE `email` = :email";
      $check_sub = $pdo->prepare($check_sub_exists_query);
      $check_sub->execute(
@@ -20,7 +21,8 @@ function createSubscriber($firstname, $lastname, $email, $country_id)
        );
        
        if($check_sub->fetchColumn()) {
-
+        old_subscriber_email($lastname, $firstname, $email);
+        // Check if user exists
         $check_id_query ="SELECT `sub_id` FROM `tbl_subscribers` WHERE `email` = :email";
         $get_sub_id = $pdo->prepare($check_id_query);
         $get_sub_id->execute(
@@ -50,7 +52,7 @@ function createSubscriber($firstname, $lastname, $email, $country_id)
              )
              );
        } else{
-
+        new_subscriber_email($lastname, $firstname, $email);
           // insert subscriber
     $sub_insert = "INSERT INTO `tbl_subscribers` (first_name, last_name, email, created_at) VALUES(:firstname, :lastname, :email, NOW());";
 
