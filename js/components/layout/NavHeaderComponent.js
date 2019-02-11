@@ -37,6 +37,8 @@ export default {
               </ul>
             </nav>
           </div>
+          <img id="headerLogo" src="./images/logo-short.svg" alt="Ontario Summer Logo">
+
         </div>
     `
 };
