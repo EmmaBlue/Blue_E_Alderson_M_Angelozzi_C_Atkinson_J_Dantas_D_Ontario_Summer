@@ -4,7 +4,7 @@ export default {
   <section id="videoSect">
   <div class="fullscreen-vid-wrap">
   <video id="vid" autoplay muted loop>
-  
+
   </video>
   </div>
   </section>
