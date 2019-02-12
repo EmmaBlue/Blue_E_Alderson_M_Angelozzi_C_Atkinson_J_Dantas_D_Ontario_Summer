@@ -5,8 +5,8 @@
 
   &__button {
     background-color: $bckgrd;
-    height: 6rem;
-    width: 6rem;
+    height: 5.25rem;
+    width: 5.25rem;
     position: fixed;
     top: 2rem;
     left: 2rem;
@@ -23,7 +23,7 @@
     position: fixed;
     top: 4.5rem;
     left: 5rem;
-    background-image: radial-gradient(#b308ed, #7c0ce8);
+    background-image: none;
     z-index: 1000;
     transition: -webkit-transform 0.8s cubic-bezier(0.69, 0, 0.007, 1);
     transition: transform 0.8s cubic-bezier(0.69, 0, 0.007, 1);
@@ -107,6 +107,7 @@
   &__checkbox:checked ~ .navigation__background {
     -webkit-transform: scale(80);
     transform: scale(80);
+    background-color: $bckgrd;
   }
 
   &__checkbox:checked ~ .navigation__nav {
@@ -116,14 +117,14 @@
 
   &__icon {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 
     &,
     &::before,
     &::after {
       width: 3em;
       height: 2px;
-      background-color: $color-white;
+      background-color: white;
       display: inline-block;
     }
     &::before,
@@ -143,12 +144,16 @@
 
   &__button:hover &__icon:before {
     top: -1rem;
-    background-color: $color-white;
+    background-color: white;
+  }
+
+  &__button:hover &__icon {
+    background-color: white;
   }
 
   &__button:hover &__icon:after {
     top: 1rem;
-    background-color: $color-white;
+    background-color: white;
   }
 
   &__checkbox:checked + &__button &__icon {
