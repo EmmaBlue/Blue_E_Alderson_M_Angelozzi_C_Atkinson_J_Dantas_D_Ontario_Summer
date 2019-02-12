@@ -1,0 +1,40 @@
+footer{
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background-color: #333;
+  max-width: 100%;
+
+  @media screen and (min-width: 600px){
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  p{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  #socials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 600px){
+      flex-wrap: nowrap;
+      width: 50%;
+      margin: 0;
+    }
+
+    i{
+      color: #fff;
+      font-size: 30px;
+    }
+  }
+
+}

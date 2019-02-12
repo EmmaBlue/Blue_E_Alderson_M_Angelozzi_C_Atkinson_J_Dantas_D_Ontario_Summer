@@ -7,19 +7,19 @@ export default {
         <div class='overlay'></div>
         <div class='content'>
           <div class='welcome'>Hello There!</div>
-          <div class='subtitle'>Get Info about Summer in Ontario.</div>
+          <div class='subtitle'>Sign up to our newsletter to get more information about what's happening in Ontario.</div>
           <form>
           <div class='input-fields'>
             <input v-model="input['first-name']" type='text' name="first-name" value="" placeholder='First Name' class='input-line full-width'></input>
             <input v-model="input['last-name']" type='text' name="last-name" value="" placeholder='Last Name' class='input-line full-width'></input>
             <input v-model="input.email" type='email' name="email" value="" placeholder='Email' class='input-line full-width'></input>
-            <select v-model="input.countries" class='input-line full-width' name="countries">
-              <option name="">Select Country...</option>
+            <label id="country-label">Select Country... </label>
+            <select v-model="input.countries" class='input-line dropdown full-width' name="countries">
+              <option class="grey" name="">Select Country...</option>
               <option v-for="country in countries" :value="country.country_id">{{ country.country_name }}</option>
             </select>
             </div>
-            <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
-            <div><button @click.prevent="create_subscriber" type='submit' name='submit' class='ghost-round full-width'>Create Account</button></div>
+            <div id="button-container"><button @click.prevent="create_subscriber" type='submit' name='submit' class='ghost-round'>Create Account</button></div>
             </form>
             <h3 v-if="msg">Subscription Successful!</h3>
         </div>

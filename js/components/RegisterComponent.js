@@ -6,7 +6,7 @@ export default {
   template: `
     <section>
       <HeaderComponent />
-      <SignupComponent/> 
+      <SignupComponent/>
       <FooterComponent />
     </section>
   `,
