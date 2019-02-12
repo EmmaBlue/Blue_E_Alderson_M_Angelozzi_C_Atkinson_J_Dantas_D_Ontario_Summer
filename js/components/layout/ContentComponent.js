@@ -60,6 +60,7 @@ export default {
 
               </section>
           </section>
+          
           <footer>
             <p>	&copy; Ontario Summer </p>
             <div id="socials">

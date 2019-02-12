@@ -7,7 +7,6 @@ export default {
     <section>
       <HeaderComponent />
       <ContentComponent />
-      <FooterComponent />
     </section>
   `,
 
