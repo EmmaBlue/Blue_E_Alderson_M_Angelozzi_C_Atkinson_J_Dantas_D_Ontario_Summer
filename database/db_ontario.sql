@@ -2,12 +2,14 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Feb 11, 2019 at 03:09 PM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Host: localhost
+-- Generation Time: Feb 12, 2019 at 03:03 AM
+-- Server version: 5.7.20
+-- PHP Version: 7.1.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -295,15 +297,28 @@ CREATE TABLE `tbl_subscribers` (
   `last_name` varchar(150) NOT NULL,
   `email` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
-  `subscribed_at` datetime DEFAULT NULL
+  `last_update_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_subscribers`
 --
 
-INSERT INTO `tbl_subscribers` (`sub_id`, `first_name`, `last_name`, `email`, `created_at`, `subscribed_at`) VALUES
-(1, 'Daniela', 'Dantas', 'dani@test.com', '2019-02-11 09:59:00', '0000-00-00 00:00:00');
+INSERT INTO `tbl_subscribers` (`sub_id`, `first_name`, `last_name`, `email`, `created_at`, `last_update_date`) VALUES
+(10, 'Emma', 'Blue', 'emmajaeblue@gmail.com', '2019-02-11 16:18:59', NULL),
+(11, 'Jacob', 'Atkinson', 'j_atkinson63@fanshaweonline.ca', '2019-02-11 16:21:14', NULL),
+(12, 'Daniela', 'Dantas', 'danifdantas@gmail.com', '2019-02-11 16:22:10', NULL),
+(13, 'Mariah', 'Alderson', 'm_alderson59387@fanshaweonline.ca', '2019-02-11 16:23:23', NULL),
+(15, 'Test', 'Test', 'Test@test.com', '2019-02-11 18:45:57', NULL),
+(16, 'First Sub Name', 'First Sub Lastname', 'camillo@test.com', '2019-02-11 18:47:42', NULL),
+(17, 'testtest', 'First Sub Lastname', 'testtest@ok.com', '2019-02-11 18:50:16', '2019-02-11 18:50:25'),
+(18, 'Emmmmma', 'Blueee', 'amme@test.ca', '2019-02-11 18:56:17', NULL),
+(21, 'Camillo', 'Angelozzi', 'c_angelozzi@fanshaweonline.ca', '2019-02-11 19:29:43', NULL),
+(22, 'Christian', 'Angelozzi', 'cangelozzi@gmail.com', '2019-02-11 19:41:52', NULL),
+(28, 'Greta', 'Garbo', 'greta@garbo.com', '2019-02-11 21:33:18', NULL),
+(29, 'zsazsa', 'gabor', 'pan@pan.com', '2019-02-11 21:42:20', NULL),
+(30, 'Nelson', 'Piquet', 'nelson@piquet.br', '2019-02-11 21:46:07', NULL),
+(31, 'AnotherPink', 'Martini', 'pink@martini.com', '2019-02-11 21:49:19', '2019-02-11 22:02:32');
 
 -- --------------------------------------------------------
 
@@ -322,7 +337,28 @@ CREATE TABLE `tbl_sub_country` (
 --
 
 INSERT INTO `tbl_sub_country` (`id`, `sub_id`, `country_id`) VALUES
-(1, 1, 31);
+(10, 10, 39),
+(11, 11, 39),
+(12, 12, 31),
+(13, 13, 39),
+(14, 14, 107),
+(15, 15, 14),
+(16, 16, 17),
+(17, 17, 9),
+(18, 18, 9),
+(19, 19, 39),
+(20, 20, 39),
+(21, 21, 39),
+(22, 22, 39),
+(23, 23, 7),
+(24, 24, 13),
+(25, 25, 11),
+(26, 26, 5),
+(27, 27, 9),
+(28, 28, 15),
+(29, 29, 168),
+(30, 30, 19),
+(31, 31, 5);
 
 --
 -- Indexes for dumped tables
@@ -360,13 +396,14 @@ ALTER TABLE `tbl_country`
 -- AUTO_INCREMENT for table `tbl_subscribers`
 --
 ALTER TABLE `tbl_subscribers`
-  MODIFY `sub_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sub_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `tbl_sub_country`
 --
 ALTER TABLE `tbl_sub_country`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
