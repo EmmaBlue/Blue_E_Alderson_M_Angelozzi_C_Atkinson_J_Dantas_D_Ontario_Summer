@@ -16,7 +16,7 @@
   background-size: cover; // position: fixed;
   overflow-y: hidden;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   transition: all 1.5s ease;
   overflow-x: hidden;
@@ -187,7 +187,7 @@
 }
 // END VIDEO STYLES
 #divider {
-  width: 100%;
+  text-align: center;
   background-color: #fff; //@media screen and (min-width: 600px){
   padding: 50px 10px; //}
   p {
