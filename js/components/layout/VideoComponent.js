@@ -55,28 +55,6 @@ export default {
       }
     },
 
-    // Play/Pause btn
-    togglePlay() {
-
-      if (vid.paused) {
-        theSVG.dataset.icon = "pause";
-        vid.play();
-      } else {
-        theSVG.dataset.icon = "play";
-        vid.pause();
-      }
-    },
-
-
-    // MUTE VIDEOCLIP
-    volOn(e) {
-      console.log('Vol ON');
-      e.currentTarget.muted = false;
-    },
-    volOff(e) {
-      console.log('Vol OFF');
-      e.currentTarget.muted = true;
-    },
 
     // UPDATE VOLUME ON volume bar
     changeVolume() {
