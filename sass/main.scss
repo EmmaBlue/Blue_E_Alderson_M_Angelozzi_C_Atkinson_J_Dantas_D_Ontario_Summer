@@ -16,3 +16,8 @@
 @import "modules/signup";
 @import "modules/home";
 @import "modules/footer";
+
+#app{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
