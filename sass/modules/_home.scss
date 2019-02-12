@@ -2,23 +2,20 @@
   position: relative;
 }
 
-@keyframes backgroundScroll{
-  from{
+@keyframes backgroundScroll {
+  from {
     background-position: 0%;
   }
-  to{
+  to {
     background-position: 100%;
   }
 }
 
-#landingSect{
-  background: url('../images/hero-bckgd-md.jpg');
-  //background-position: center;
+#landingSect {
+  background: url('../images/hero-bckgd-md.jpg'); //background-position: center;
   background-position: 100%;
   animation: backgroundScroll 20s linear;
-  background-size: cover;
-  // position: fixed;
-
+  background-size: cover; // position: fixed;
   overflow-y: hidden;
   height: 100vh;
   width: 100%;
@@ -51,18 +48,16 @@
       }
     }
   }
-
-  #heroTitle{
+  #heroTitle {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 4px solid #fff;
     padding: 20px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transition: all 0.8s ease;
-
-    @media screen and (min-width: 850px){
+    @media screen and (min-width: 850px) {
       display: block;
       background: none;
       position: absolute;
@@ -72,27 +67,22 @@
       left: 100px;
       opacity: 0;
     }
-
-    #titleLogo{
+    #titleLogo {
       height: 50px;
     }
-
-    .title-font{
+    .title-font {
       font-family: 'Raleway-Regular', sans-serif;
       font-size: 40px;
       color: #fff;
     }
-
-    .tagline{
-      font-family: 'Patrick Hand', sans-serif;
-      //font-size: 30px;
+    .tagline {
+      font-family: 'Patrick Hand', sans-serif; //font-size: 30px;
       font-size: 25px;
       text-align: center;
       color: #fff;
     }
   }
-
-  #img{
+  #img {
     display: none;
     @media screen and (min-width: 850px) {
       display: block;
@@ -116,92 +106,108 @@
 #contentCon {
   @media screen and (min-width: 850px) {
     position: relative;
-    z-index: 0;
-    //background-color: #fff;
+    z-index: 0; //background-color: #fff;
   }
 }
 
 #mainDesc {
-
   padding: 50px 10px;
   background-color: #fff;
-  margin: 0 auto;
-  //max-width: 850px;
-
-  #descCon{
-    @media screen and (min-width: 600px){
+  margin: 0 auto; //max-width: 850px;
+  #descCon {
+    @media screen and (min-width: 600px) {
       max-width: 550px;
       margin: 0 auto;
     }
-
-    .title{
+    .title {
       font-size: 20px;
       font-weight: 900;
       color: #01bec0;
       margin-bottom: 50px;
     }
-
-    .tagline{
+    .tagline {
       font-family: 'Patrick Hand', sans-serif;
       font-size: 25px;
       color: #01bec0;
     }
-
-    p{
+    p {
       //@media screen and (min-width: 600px){
-        line-height: 30px;
-        margin-bottom: 25px;
-      //}
+      line-height: 30px;
+      margin-bottom: 25px; //}
     }
   }
-
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     padding: 100px 0;
-    text-align: center;
-    //background: rgba(255,255,255,0.5);
+    text-align: center; //background: rgba(255,255,255,0.5);
   }
-
   h2 {
     background-color: #fff;
     padding: 50px 10px;
-
     @media screen and (min-width: 850px) {
       font-size: 7.5em;
     }
   }
-
 }
-
-
 
 #videoSect {
   //height: 100vh;
-  width: 100vw;
-  //padding-bottom: 20px;
+  width: 100vw; //padding-bottom: 20px;
   margin: 0;
   background-color: #fff;
 }
 
 .fullscreen-vid-wrap {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   video {
     width: 100%;
     height: 100%;
   }
 }
 
-#divider{
-  width: 100%;
-  background-color: #fff;
-  //@media screen and (min-width: 600px){
-    padding: 50px 10px;
-  //}
+.controls {
+  background-color: transparentize($color: #002C77, $amount: 0.5);
+  height: 40px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 99;
+}
 
-  p{
+.controls ul [data-icon] {
+  font-size: 3em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.controls ul {
+  list-style: none;
+}
+
+.controls ul li {
+  display: inline-block;
+  padding: 0.1em;
+}
+
+.play-pause {
+  width: 2rem;
+  margin: 0 2rem;
+}
+
+#volumeBar {
+  display: inline-block;
+}
+
+// END VIDEO STYLES
+#divider {
+  width: 100%;
+  background-color: #fff; //@media screen and (min-width: 600px){
+  padding: 50px 10px; //}
+  p {
     font-size: 20px;
     color: #01bec0;
     font-weight: 900;
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 600px) {
       text-align: center;
     }
   }
@@ -240,14 +246,10 @@
   .box::after {
     content: "PLAY";
     color: #fff;
-
     font-size: 40px; //font-weight: 700;
-
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    //font-weight: 700;
-
+    font-weight: 900; //font-weight: 700;
     //padding-left: 20px;
     //padding-bottom: 20px;
     display: flex;
