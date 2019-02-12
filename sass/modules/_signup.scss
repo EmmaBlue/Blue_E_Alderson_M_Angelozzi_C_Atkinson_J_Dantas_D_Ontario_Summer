@@ -18,7 +18,7 @@ select {
 
   margin: 0 auto;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 
   button {
 
@@ -229,8 +229,8 @@ select {
 
 @media (max-width: 500px) {
   .window {
-    width: 100%;
-    height: 100%;
+    height: 80%;
+    margin-top: 20%;
   }
   .overlay {
     width: 100%;
