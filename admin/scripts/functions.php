@@ -84,5 +84,36 @@ function new_subscriber_email($lastname, $firstname, $email)
     }
 }
 
+// add subscriber to Mailchimp List
+function subscribed_to_list($firstname, $lastname, $email)
+{
+    $apikey = 'a012081f98ba363ac540b99198aa438b-us20';
+    $auth = base64_encode('user:'.$apikey);
 
+    $data = array(
+                'apikey'        => $apikey,
+                'email_address' => $email,
+                'status'        => 'subscribed',
+                'merge_fields'  => array(
+                    'FNAME' => $firstname,
+                    'LNAME' => $lastname
+                )
+            );
+    $json_data = json_encode($data);
 
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://us20.api.mailchimp.com/3.0/lists/ea94fb0aac/members/');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json',
+                                                        'Authorization: Basic '.$auth));
+    curl_setopt($ch, CURLOPT_USERAGENT, 'PHP-MCAPI/2.0');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+
+    $result = curl_exec($ch);
+
+    var_dump($result);
+    die('Mailchimp executed');
+}
