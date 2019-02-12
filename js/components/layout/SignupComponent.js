@@ -21,7 +21,7 @@ export default {
             </div>
             <div id="button-container"><button @click.prevent="create_subscriber" type='submit' name='submit' class='ghost-round'>Create Account</button></div>
             </form>
-            <h3 v-if="msg">Subscription Successful!</h3>
+            <h1 v-if="msg">Subscription Successful!</h1>
         </div>
       </div>
     </div>
@@ -60,6 +60,7 @@ export default {
         });
     },
     create_subscriber() {
+      this.msg = !this.msg;
       if (this.input["first-name"] !== "" && this.input["last-name"] !== "" && this.input.email !== "" && this.input.countries !== "") {
         // do afetch here and check creds on the back end
         // CREATE some form data to do a POST request
@@ -70,6 +71,11 @@ export default {
         formData.append("email", this.input.email);
         formData.append("countries", this.input.countries);
 
+        this.input["first-name"] = "";
+        this.input["last-name"] = "";
+        this.input.email = "";
+        this.input.countries = "";
+        
         let url = `./admin/sign-up.php`;
         fetch(url, {
           method: "POST",
@@ -83,11 +89,6 @@ export default {
             } else {
               // this.$emit("authenticated", true);
               // this.$router.replaceries({ name: "users" });
-              this.input["first-name"] = "";
-              this.input["last-name"] = "";
-              this.input.email = "";
-              this.input.countries = "";
-              this.msg = !this.msg;
               console.log("Subscription created");
             }
           })

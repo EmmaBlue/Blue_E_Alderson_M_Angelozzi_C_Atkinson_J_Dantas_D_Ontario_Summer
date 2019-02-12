@@ -1,7 +1,6 @@
 #mainHome {
   position: relative;
 }
-
 @keyframes backgroundScroll {
   from {
     background-position: 0%;
@@ -10,7 +9,6 @@
     background-position: 100%;
   }
 }
-
 #landingSect {
   background: url('../images/hero-bckgd-md.jpg'); //background-position: center;
   background-position: 100%;
@@ -18,7 +16,7 @@
   background-size: cover; // position: fixed;
   overflow-y: hidden;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   transition: all 1.5s ease;
   overflow-x: hidden;
@@ -102,14 +100,12 @@
     }
   }
 }
-
 #contentCon {
   @media screen and (min-width: 850px) {
     position: relative;
     z-index: 0; //background-color: #fff;
   }
 }
-
 #mainDesc {
   padding: 50px 10px;
   background-color: #fff;
@@ -149,14 +145,12 @@
     }
   }
 }
-
 #videoSect {
   //height: 100vh;
   width: 100vw; //padding-bottom: 20px;
   margin: 0;
   background-color: #fff;
 }
-
 .fullscreen-vid-wrap {
   overflow: hidden;
   display: flex;
@@ -166,7 +160,6 @@
     height: 100%;
   }
 }
-
 .controls {
   background-color: transparentize($color: #002C77, $amount: 0.5);
   height: 40px;
@@ -174,34 +167,28 @@
   position: relative;
   z-index: 99;
 }
-
 .controls ul [data-icon] {
   font-size: 3em;
   color: #fff;
   cursor: pointer;
 }
-
 .controls ul {
   list-style: none;
 }
-
 .controls ul li {
   display: inline-block;
   padding: 0.1em;
 }
-
 .play-pause {
   width: 2rem;
   margin: 0 2rem;
 }
-
 #volumeBar {
   display: inline-block;
 }
-
 // END VIDEO STYLES
 #divider {
-  width: 100%;
+  text-align: center;
   background-color: #fff; //@media screen and (min-width: 600px){
   padding: 50px 10px; //}
   p {
@@ -213,7 +200,6 @@
     }
   }
 }
-
 #picSect {
   display: grid;
   grid-column-gap: 10px;
