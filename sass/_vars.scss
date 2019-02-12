@@ -13,9 +13,9 @@ $almost-black: #191919;
 $reg-font: 'Raleway',
 sans-serif;
 @mixin box-shadow {
-  -webkit-box-shadow: -5px -8px 62px -7px rgba(0, 0, 0, 0.39);
-  -moz-box-shadow: -5px -8px 62px -7px rgba(0, 0, 0, 0.39);
-  box-shadow: -5px -8px 62px -7px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: -1px -12px 42px -4px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: -1px -12px 42px -4px rgba(0, 0, 0, 0.28);
+  box-shadow: -1px -12px 42px -4px rgba(0, 0, 0, 0.28);
 }
 
 $reg-font: 'Raleway',

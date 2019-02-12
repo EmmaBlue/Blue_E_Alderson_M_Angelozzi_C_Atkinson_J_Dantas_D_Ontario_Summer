@@ -1,23 +1,14 @@
 // import variables
 @import "_vars";
-
 // import utilities rules
 @import "_utilities";
-
 // import page fundamentals rules
 @import "_base";
-
 // import animations rules
 @import "_animations";
-
 // import modules components
 @import "modules/hamburgerNav";
 @import "modules/header";
 @import "modules/signup";
 @import "modules/home";
 @import "modules/footer";
-
-#app{
-  max-width: 100vw;
-  overflow-x: hidden;
-}
