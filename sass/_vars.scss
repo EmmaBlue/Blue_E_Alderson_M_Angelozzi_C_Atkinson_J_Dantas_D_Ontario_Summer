@@ -10,4 +10,35 @@ $dark-grey: #5e5d5d;
 $red: #f81621;
 $muddy-purple: #905985;
 $almost-black: #191919;
+
+$reg-font: 'Raleway',
+sans-serif;
+@mixin box-shadow {
+  -webkit-box-shadow: -5px -8px 62px -7px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -5px -8px 62px -7px rgba(0, 0, 0, 0.39);
+  box-shadow: -5px -8px 62px -7px rgba(0, 0, 0, 0.39);
+}
+
 $reg-font: 'Raleway', sans-serif;
+
+//fonts
+@fontface{
+  font-family: 'Raleway-Regular';
+  src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@fontface{
+  font-family: 'Raleway-Black';
+  src: url('../fonts/Raleway-Black.ttf');
+}
+
+@fontface{
+  font-family: 'Patrick Hand';
+  src: url('../fonts/PatrickHand-Regular.ttf');
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
