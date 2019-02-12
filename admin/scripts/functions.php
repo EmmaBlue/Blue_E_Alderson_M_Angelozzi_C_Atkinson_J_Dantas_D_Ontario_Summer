@@ -87,7 +87,7 @@ function new_subscriber_email($lastname, $firstname, $email)
 // add subscriber to Mailchimp List
 function subscribed_to_list($firstname, $lastname, $email)
 {
-    $apikey = 'a012081f98ba363ac540b99198aa438b-us20';
+    $apikey = '1704523e86396ec69239cf5ba42716d5-us20';
     $auth = base64_encode('user:'.$apikey);
 
     $data = array(
