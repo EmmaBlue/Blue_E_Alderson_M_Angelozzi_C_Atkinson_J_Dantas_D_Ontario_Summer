@@ -1,6 +1,6 @@
 <?php
 
-    $apikey = 'a012081f98ba363ac540b99198aa438b-us20'; // replace with your API key
+    $apikey = '1704523e86396ec69239cf5ba42716d5-us20'; // replace with your API key
     $dc = 'us20'; // replace with your data center
 
     $data = array( // the information for your new list--not all is required
