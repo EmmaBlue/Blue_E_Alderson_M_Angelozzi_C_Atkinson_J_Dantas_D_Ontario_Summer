@@ -95,8 +95,8 @@ function subscribed_to_list($firstname, $lastname, $email)
                 'email_address' => $email,
                 'status'        => 'subscribed',
                 'merge_fields'  => array(
-                    'First_Name' => $firstname,
-                    'Last_Name' => $lastname
+                    'FNAME' => $firstname,
+                    'LNAME' => $lastname
                 )
             );
     $json_data = json_encode($data);
